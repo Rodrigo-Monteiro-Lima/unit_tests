@@ -34,7 +34,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(typeof productDetails).toBe('function');
   });
   it('Verificar se a função retorna um array', () => {
-    expect(typeof productDetails('Álcool gel', 'Máscara')).not.toBe('array');
+    expect(Array.isArray(productDetails('Álcool gel', 'Máscara'))).toBe(true);
   });
   it('Verificar se o array retorna dois itens', () => {
     expect(productDetails('Álcool gel', 'Máscara').length).toBe(2);
